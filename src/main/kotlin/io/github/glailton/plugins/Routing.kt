@@ -1,6 +1,7 @@
 package io.github.glailton.plugins
 
 import io.github.glailton.routes.getAllHeroes
+import io.github.glailton.routes.getAllHeroesAlternative
 import io.github.glailton.routes.root
 import io.github.glailton.routes.searchHeroes
 import io.ktor.server.routing.*
@@ -14,7 +15,7 @@ fun Application.configureRouting() {
 
     routing {
         root()
-        getAllHeroes()
+        getAllHeroesAlternative()
         searchHeroes()
 
         static("/images") {
