@@ -50,7 +50,7 @@ class ApplicationTest {
                 val actual = Json.decodeFromString<ApiResponse>(response.bodyAsText())
                 val expected = ApiResponse(
                     success = true,
-                    message = "Ok",
+                    message = "ok",
                     prevPage = calculatePage(page = page)["prevPage"],
                     nextPage = calculatePage(page = page)["nextPage"],
                     heroes = heroes[page - 1],
@@ -80,7 +80,7 @@ class ApplicationTest {
             val actual = Json.decodeFromString<ApiResponse>(response.bodyAsText())
             val expected = ApiResponse(
                 success = true,
-                message = "Ok",
+                message = "ok",
                 prevPage = calculatePage(page = 1)["prevPage"],
                 nextPage = calculatePage(page = 1)["nextPage"],
                 heroes = heroes[0],
@@ -118,7 +118,7 @@ class ApplicationTest {
             val actual = Json.decodeFromString<ApiResponse>(response.bodyAsText())
             val expected = ApiResponse(
                 success = false,
-                message = "Only numbers allowed."
+                message = "Only Numbers Allowed."
             )
 
             assertEquals(
